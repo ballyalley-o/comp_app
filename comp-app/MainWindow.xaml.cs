@@ -26,5 +26,17 @@ namespace comp_app
 
             resultLabel.Content = "2323";
         }
+
+        private void sevenBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(resultLabel.Content.ToString() == "0")
+            {
+                resultLabel.Content = "7";
+            }
+            else
+            {
+                resultLabel.Content = $"{resultLabel.Content}7";
+            }
+        }
     }
 }
