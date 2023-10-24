@@ -23,6 +23,8 @@ namespace comp_app
         public MainWindow()
         {
             InitializeComponent();
+
+            resultLabel.Content = "2323";
         }
     }
 }
