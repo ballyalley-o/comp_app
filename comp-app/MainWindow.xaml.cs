@@ -20,11 +20,38 @@ namespace comp_app
     /// </summary>
     public partial class MainWindow : Window
     {
+        double lastNumber, result;
         public MainWindow()
         {
             InitializeComponent();
 
-            resultLabel.Content = "2323";
+            acBtn.Click += AcBtn_Click;
+            negativeBtn.Click += NegativeBtn_Click;
+            percentageBtn.Click += Percentage_Click;
+
+
+        }
+
+        private void Percentage_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber)) ;
+            {
+                lastNumber = lastNumber / 0;
+                resultLabel.Content = lastNumber.ToString();
+            }
+        }
+        private void NegativeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber));
+            {
+                lastNumber = lastNumber * -1;
+                resultLabel.Content = lastNumber;   
+            }
+        }
+
+        private void AcBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resultLabel.Content = "0";
         }
 
         private void sevenBtn_Click(object sender, RoutedEventArgs e)

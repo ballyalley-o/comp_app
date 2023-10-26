@@ -24,14 +24,15 @@
         <Label x:Name="resultLabel"
                Content="0" 
                HorizontalAlignment="Right"
-               VerticalAlignment="Top"
-               FontSize="60" Grid.Column="3" Margin="0,50,0,0" Grid.RowSpan="2"/>
+               VerticalAlignment="Bottom"
+               FontSize="60" 
+               Grid.ColumnSpan="4"/>
         <Button x:Name="acBtn"
                 Content="AC" 
                 Grid.Row="1" 
                 Margin="5" />
         <Button x:Name="negativeBtn"
-                Content="+/1"
+                Content="+/-"
                 Grid.Row="1"
                 Margin="5"
                 Grid.Column="1"/>
