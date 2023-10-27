@@ -28,24 +28,30 @@ namespace comp_app
             acBtn.Click += AcBtn_Click;
             negativeBtn.Click += NegativeBtn_Click;
             percentageBtn.Click += Percentage_Click;
+            equalsBtn.Click += EqualsBtn_Click;
 
 
         }
 
+        private void EqualsBtn_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void Percentage_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber)) ;
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
-                lastNumber = lastNumber / 0;
+                lastNumber = lastNumber / 100;
                 resultLabel.Content = lastNumber.ToString();
             }
         }
         private void NegativeBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber));
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
                 lastNumber = lastNumber * -1;
-                resultLabel.Content = lastNumber;   
+                resultLabel.Content = lastNumber.ToString();   
             }
         }
 
@@ -54,7 +60,7 @@ namespace comp_app
             resultLabel.Content = "0";
         }
 
-        private void sevenBtn_Click(object sender, RoutedEventArgs e)
+        private void NumBtn_Click(object sender, RoutedEventArgs e)
         {
             if(resultLabel.Content.ToString() == "0")
             {
