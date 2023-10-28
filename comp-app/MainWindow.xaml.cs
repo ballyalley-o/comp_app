@@ -60,15 +60,45 @@ namespace comp_app
             resultLabel.Content = "0";
         }
 
+        private void OperationBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void NumBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(resultLabel.Content.ToString() == "0")
+
+            int selectedValue = 0;
+
+            if (sender == zeroBtn)
+                selectedValue = 0;
+            if (sender == oneBtn)
+                selectedValue = 1;
+            if (sender == twoBtn)
+                selectedValue = 2;
+            if (sender == threeBtn)
+                selectedValue = 3;
+            if (sender == fourBtn)
+                selectedValue = 4;
+            if (sender == fiveBtn)
+                selectedValue = 5;
+            if (sender == sixBtn)
+                selectedValue = 6;
+            if (sender == sevenBtn)
+                selectedValue = 7;
+            if (sender == eightBtn)
+                selectedValue = 8;
+            if (sender == nineBtn)
+                selectedValue = 9;
+
+
+            if (resultLabel.Content.ToString() == "0")
             {
-                resultLabel.Content = "7";
+                resultLabel.Content = $"{selectedValue}";
             }
             else
             {
-                resultLabel.Content = $"{resultLabel.Content}7";
+                resultLabel.Content = $"{resultLabel.Content}{selectedValue}";
             }
         }
     }

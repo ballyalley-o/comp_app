@@ -85,7 +85,7 @@
             Grid.Row="3"
             Margin="6"
             Click="NumBtn_Click"
-            Content="6" />
+            Content="4" />
         <Button
             x:Name="fiveBtn"
             Grid.Row="3"
@@ -99,7 +99,7 @@
             Grid.Column="2"
             Margin="5"
             Click="NumBtn_Click"
-            Content="4" />
+            Content="6" />
         <Button
             x:Name="minusBtn"
             Grid.Row="3"
@@ -111,7 +111,7 @@
             Grid.Row="4"
             Margin="6"
             Click="NumBtn_Click"
-            Content="3" />
+            Content="1" />
         <Button
             x:Name="twoBtn"
             Grid.Row="4"
@@ -125,7 +125,7 @@
             Grid.Column="2"
             Margin="5"
             Click="NumBtn_Click"
-            Content="1" />
+            Content="3" />
         <Button
             x:Name="addBtn"
             Grid.Row="4"
