@@ -20,7 +20,8 @@ namespace comp_app
     /// </summary>
     public partial class MainWindow : Window
     {
-        double lastNumber, result;
+        double lastNum, result;
+        SelectedOperator selectedOperator;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,23 +36,42 @@ namespace comp_app
 
         private void EqualsBtn_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            double newNum;
+            if (double.TryParse(resultLabel.Content.ToString(), out newNum))
+            {
+                switch (selectedOperator)
+                {
+                    case SelectedOperator.Addition:
+                        result = Math.Add(lastNum, newNum);
+                        break;
+                    case SelectedOperator.Subtraction:
+                        result = Math.Substract(lastNum, newNum);
+                        break;
+                    case SelectedOperator.Multiplication:
+                        result = Math.Multiply(lastNum, newNum);
+                        break;
+                    case SelectedOperator.Division:
+                        result = Math.Divide(lastNum, newNum);
+                        break;
+                }
+                resultLabel.Content = result.ToString();
+            }
         }
 
         private void Percentage_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNum))
             {
-                lastNumber = lastNumber / 100;
-                resultLabel.Content = lastNumber.ToString();
+                lastNum = lastNum / 100;
+                resultLabel.Content = lastNum.ToString();
             }
         }
         private void NegativeBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNum))
             {
-                lastNumber = lastNumber * -1;
-                resultLabel.Content = lastNumber.ToString();   
+                lastNum = lastNum * -1;
+                resultLabel.Content = lastNum.ToString();   
             }
         }
 
@@ -62,10 +82,26 @@ namespace comp_app
 
         private void OperationBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber)) 
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNum)) 
             {
                 resultLabel.Content = "0";
 
+            }
+            if (sender == multiplyBtn) selectedOperator = SelectedOperator.Multiplication;
+            if (sender == divideBtn) selectedOperator = SelectedOperator.Division;
+            if (sender == addBtn) selectedOperator = SelectedOperator.Addition;
+            if (sender == minusBtn) selectedOperator = SelectedOperator.Subtraction;
+        }
+
+        private void decimalBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (resultLabel.Content.ToString().Contains("."))
+            {
+                // break
+            } 
+            else
+            {
+                resultLabel.Content = $"{resultLabel.Content}.";
             }
         }
 
@@ -81,6 +117,35 @@ namespace comp_app
             {
                 resultLabel.Content = $"{resultLabel.Content}{selectedValue}";
             }
+        }
+    }
+
+    // creating a new type
+    public enum SelectedOperator
+    {
+        Addition,
+        Subtraction,
+        Multiplication,
+        Division,
+    }
+
+    public class Math
+    {
+        public static double Add(double n1, double n2)
+        {
+            return n1 + n2;
+        }
+        public static double Substract(double n1, double n2)
+        {
+            return n1 - n2;
+        }
+        public static double Multiply(double n1, double n2)
+        {
+            return n1 * n2;
+        }
+        public static double Divide(double n1, double n2)
+        {
+            return n1 / n2;
         }
     }
 }

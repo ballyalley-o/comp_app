@@ -148,6 +148,7 @@
             Grid.Row="5"
             Grid.Column="2"
             Margin="5"
+            Click="decimalBtn_Click"
             Content="." />
         <Button
             x:Name="equalsBtn"
