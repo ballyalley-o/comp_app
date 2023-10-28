@@ -60,11 +60,15 @@ namespace comp_app
 
         private void Percentage_Click(object sender, RoutedEventArgs e)
         {
-            if (double.TryParse(resultLabel.Content.ToString(), out lastNum))
+            double tempNum;
+            if (double.TryParse(resultLabel.Content.ToString(), out tempNum))
             {
-                lastNum = lastNum / 100;
-                resultLabel.Content = lastNum.ToString();
+                tempNum = (tempNum / 100);
+                if (lastNum != 0) 
+                    tempNum *= lastNum;
+                resultLabel.Content = tempNum.ToString();
             }
+            
         }
         private void NegativeBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -78,6 +82,8 @@ namespace comp_app
         private void AcBtn_Click(object sender, RoutedEventArgs e)
         {
             resultLabel.Content = "0";
+            result = 0;
+            lastNum = 0;
         }
 
         private void OperationBtn_Click(object sender, RoutedEventArgs e)
