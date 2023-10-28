@@ -7,6 +7,6 @@
     <Application.Resources>
         <SolidColorBrush x:Key="numColor" Color="#444444" />
         <SolidColorBrush x:Key="operatorColor" Color="Orange" />
-        <SolidColorBrush x:Key="textColor" Color="White"/>
+        <SolidColorBrush x:Key="textColor" Color="#FFF" />
     </Application.Resources>
 </Application>
