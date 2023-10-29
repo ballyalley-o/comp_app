@@ -8,5 +8,39 @@
         <SolidColorBrush x:Key="numColor" Color="#444444" />
         <SolidColorBrush x:Key="operatorColor" Color="Orange" />
         <SolidColorBrush x:Key="textColor" Color="#FFF" />
+
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+
+        <Style x:Key="numberBtnStyles" TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderBrush" Value="White" />
+            <Setter Property="FontSize" Value="25" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Background" Value="{StaticResource numColor}" />
+        </Style>
+
+        <Style
+            x:Key="operatorBtnStyles"
+            BasedOn="{StaticResource numberBtnStyles}"
+            TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource operatorColor}" />
+        </Style>
+
+        <Style
+            x:Key="specialBtnStyles"
+            BasedOn="{StaticResource numberBtnStyles}"
+            TargetType="Button">
+            <Setter Property="Background" Value="LightGray" />
+            <Setter Property="Foreground" Value="Black" />
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="70" />
+        </Style>
     </Application.Resources>
 </Application>
