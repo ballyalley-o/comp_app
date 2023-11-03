@@ -30,167 +30,132 @@
             Grid.ColumnSpan="4"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
-            Content="0"
-            FontSize="60" />
+            Content="0" />
         <Button
             x:Name="acBtn"
             Grid.Row="1"
-            Margin="5"
-            Background="{StaticResource operatorColor}"
             Content="AC"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource specialBtnStyles}" />
         <Button
             x:Name="negativeBtn"
             Grid.Row="1"
             Grid.Column="1"
-            Margin="5"
-            Content="+/-" />
+            Content="+/-"
+            Style="{StaticResource specialBtnStyles}" />
         <Button
             x:Name="percentageBtn"
             Grid.Row="1"
             Grid.Column="2"
-            Margin="5"
-            Content="%" />
+            Content="%"
+            Style="{StaticResource specialBtnStyles}" />
         <Button
             x:Name="divideBtn"
             Grid.Row="1"
             Grid.Column="3"
-            Margin="5"
-            Background="{StaticResource operatorColor}"
             Click="OperationBtn_Click"
             Content="/"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource operatorBtnStyles}" />
         <Button
             x:Name="sevenBtn"
             Grid.Row="2"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="7"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="eightBtn"
             Grid.Row="2"
             Grid.Column="1"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="8"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="nineBtn"
             Grid.Row="2"
             Grid.Column="2"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="9"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="multiplyBtn"
             Grid.Row="2"
             Grid.Column="3"
-            Margin="5"
-            Background="{StaticResource operatorColor}"
             Click="OperationBtn_Click"
             Content="*"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource operatorBtnStyles}" />
         <Button
             x:Name="fourBtn"
             Grid.Row="3"
-            Margin="6"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="4"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="fiveBtn"
             Grid.Row="3"
             Grid.Column="1"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="5"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="sixBtn"
             Grid.Row="3"
             Grid.Column="2"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="6"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="minusBtn"
             Grid.Row="3"
             Grid.Column="3"
-            Margin="5"
-            Background="{StaticResource operatorColor}"
             Click="OperationBtn_Click"
             Content="-"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource operatorBtnStyles}" />
         <Button
             x:Name="oneBtn"
             Grid.Row="4"
-            Margin="6"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="1"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="twoBtn"
             Grid.Row="4"
             Grid.Column="1"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="2"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="threeBtn"
             Grid.Row="4"
             Grid.Column="2"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="3"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="addBtn"
             Grid.Row="4"
             Grid.Column="3"
-            Margin="5"
-            Background="{StaticResource operatorColor}"
             Click="OperationBtn_Click"
             Content="+"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource operatorBtnStyles}" />
         <Button
             x:Name="zeroBtn"
             Grid.Row="5"
             Grid.ColumnSpan="2"
-            Margin="6"
-            Background="{StaticResource numColor}"
             Click="NumBtn_Click"
             Content="0"
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="decimalBtn"
             Grid.Row="5"
             Grid.Column="2"
-            Margin="5"
-            Background="{StaticResource numColor}"
             Click="decimalBtn_Click"
             Content="."
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource numberBtnStyles}" />
         <Button
             x:Name="equalsBtn"
             Grid.Row="5"
             Grid.Column="3"
-            Margin="5"
-            Background="{StaticResource operatorColor}"
             Content="="
-            Foreground="{StaticResource textColor}" />
+            Style="{StaticResource operatorBtnStyles}" />
 
     </Grid>
 </Window>
